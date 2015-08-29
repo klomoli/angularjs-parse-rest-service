@@ -7,6 +7,7 @@ Usage
 Example:
 ```js
 var params 		 = {limit : 400, skip : 0, order: '-createdAt'}; //Customize your query here
+//var params 	 = {where: {'' : ''}, limit : 400, skip : 0, order: '-createdAt'}; //Another example
 var centers      = [];
 var classParse   = 'Centers'; //Type your parse class name here
 
