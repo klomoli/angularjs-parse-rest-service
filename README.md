@@ -6,9 +6,9 @@ Usage
 
 Example:
 ```javascript
-var params 		 = {limit : 400, skip : 0, order: '-createdAt'}; //Customize your query here
-var centers    = [];
-var classParse = 'Centers'; //Type your parse class name here
+var params 		   = {limit : 400, skip : 0, order: '-createdAt'}; //Customize your query here
+var centers      = [];
+var classParse   = 'Centers'; //Type your parse class name here
 
 $scope.getCenters = function()
 {
