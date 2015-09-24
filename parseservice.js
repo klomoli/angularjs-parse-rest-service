@@ -119,7 +119,7 @@ app.factory('parseService',  function($http, $window){
             uploadFile: function(name, data, contentType){
 
                 return $http.post(
-                    'https://api.parse.com/1/files/' + name, data,
+                    baseUrl+'/files/' + name, data,
                     {
                         headers: {
                             'X-Parse-Application-Id' : PARSE_APPLICATION_ID,
@@ -133,7 +133,7 @@ app.factory('parseService',  function($http, $window){
             getObjects: function(classParse, params){
 
                 return $http.get(
-                    'https://api.parse.com/1/classes/'+classParse,
+                    baseUrl+'/'+classParse,
                     {
                         headers: {
                             'X-Parse-Application-Id' : PARSE_APPLICATION_ID,
@@ -147,7 +147,7 @@ app.factory('parseService',  function($http, $window){
             deleteObject: function(classParse, id){
 
                 return $http.delete(
-                    'https://api.parse.com/1/classes/' + classParse + '/'+ id,
+                    baseUrl+'/classes/' + classParse + '/'+ id,
                     {
                         headers: {
                             'X-Parse-Application-Id' : PARSE_APPLICATION_ID,
@@ -159,7 +159,7 @@ app.factory('parseService',  function($http, $window){
             updateObject: function(classParse, id , params){
 
                 return $http.put(
-                    'https://api.parse.com/1/classes/'+ classParse + '/' + id,
+                    baseUrl+'/classes/'+ classParse + '/' + id,
                     params,
                     {
                         headers: {
@@ -172,7 +172,7 @@ app.factory('parseService',  function($http, $window){
             createObject: function(classParse, params){
 
                 return $http.post(
-                    'https://api.parse.com/1/classes/'+classParse,
+                    baseUrl+'/classes/'+classParse,
                     params,
                     {
                         headers: {
@@ -184,7 +184,7 @@ app.factory('parseService',  function($http, $window){
             },
             showObject: function(classParse,params,id){
                 return $http.get(
-                    'https://api.parse.com/1/classes/'+classParse+'/'+id,
+                    baseUrl+'/classes/'+classParse+'/'+id,
                     {
                         headers: {
                             'X-Parse-Application-Id' : PARSE_APPLICATION_ID,
